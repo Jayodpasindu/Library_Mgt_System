@@ -16,5 +16,5 @@
     </padding>
 
 
-    <Button text="Category" onAction="#handleCategory"/>
+    <Button text="Category" fx:id="category_button" onAction="#handleCategoryClick"/>
 </VBox>

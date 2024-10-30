@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_managmenrt.controller.CategoryController" prefWidth="600" prefHeight="400">
+    <BorderPane>
+        <top>
+            <GridPane hgap="10" vgap="10">
+                <TextField fx:id="idField" promptText="Category ID" GridPane.columnIndex="0" />
+                <TextField fx:id="nameField" promptText="Category Name" GridPane.columnIndex="1" />
+                <Button fx:id="addButton" text="Add / Update Category" GridPane.columnIndex="2" />
+            </GridPane>
+        </top>
+        <center>
+            <TableView fx:id="categoryTable" prefWidth="600" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="Id" prefWidth="50" />
+                    <TableColumn fx:id="nameColumn" text="Category Name" prefWidth="300" />
+                    <TableColumn fx:id="editColumn" text="Edit" prefWidth="100" />
+                    <TableColumn fx:id="deleteColumn" text="Delete" prefWidth="100" />
+                </columns>
+            </TableView>
+        </center>
+    </BorderPane>
+</AnchorPane>

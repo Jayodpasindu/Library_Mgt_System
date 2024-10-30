@@ -15,5 +15,5 @@ module com.example.library_managmenrt {
     opens com.example.library_managmenrt.controller to javafx.fxml;
 
     // Other module declarations
-    opens com.example.library_managmenrt.model to org.hibernate.orm.core;
+    opens com.example.library_managmenrt.model to org.hibernate.orm.core, javafx.base;
 }

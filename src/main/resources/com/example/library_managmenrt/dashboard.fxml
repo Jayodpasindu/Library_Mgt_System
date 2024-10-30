@@ -17,4 +17,6 @@
 
 
     <Button text="Category" fx:id="category_button" onAction="#handleCategoryClick"/>
+    <Button text="Books" fx:id="book_button" onAction="#handleBookClick"/>
+
 </VBox>

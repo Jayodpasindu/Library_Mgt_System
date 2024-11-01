@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_managmenrt.controller.transactionController" prefWidth="600" prefHeight="400">
+    <BorderPane>
+        <top>
+            <VBox spacing="10" style="-fx-padding: 0 0 10 0;">
+                <HBox spacing="10">
+                    <!-- Add Back Button -->
+                    <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+                </HBox>
+                <GridPane hgap="10" vgap="10">
+                    <TextField fx:id="memberIdField" promptText="Member Id" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="memberNameField" promptText="Member Name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <TextField fx:id="bookIdField" promptText="Book Id" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="bookNameField" promptText="Book Name" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <DatePicker fx:id="borrowedDatePicker" accessibleText="Borrowed Date" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <DatePicker fx:id="returnedDatePicker" accessibleText="Returned Date" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <Button fx:id="addButton" text="Add Record" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                </GridPane>
+            </VBox>
+        </top>
+        <center>
+            <TableView fx:id="transactionTable" prefWidth="1050" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="Id" prefWidth="50" />
+                    <TableColumn fx:id="memberIdColumn" text="Member Id" prefWidth="200" />
+                    <TableColumn fx:id="memberNameColumn" text="Member Name" prefWidth="200" />
+                    <TableColumn fx:id="bookIdColumn" text="Book Id" prefWidth="100" />
+                    <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="100" />
+                    <TableColumn fx:id="borrowedDateColumn" text="Borrowed Date" prefWidth="100" />
+                    <TableColumn fx:id="returnedDateColumn" text="Returned Date" prefWidth="100" />
+                    <TableColumn fx:id="returnedButtonColumn" text="Returned" prefWidth="100" />
+                    <TableColumn fx:id="deleteColumn" text="Delete" prefWidth="100" />
+                </columns>
+            </TableView>
+        </center>
+    </BorderPane>
+</AnchorPane>

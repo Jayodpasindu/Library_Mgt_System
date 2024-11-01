@@ -4,14 +4,18 @@ import com.example.library_managmenrt.dao.BookDao;
 import com.example.library_managmenrt.dao.MemberDao;
 import com.example.library_managmenrt.model.Book;
 import com.example.library_managmenrt.model.Member;
+import com.example.library_managmenrt.utill.Navigation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
 public class MemberController {
+    @FXML
+    private Button backButton;
     @FXML
     private TextField nameField;
     @FXML
@@ -179,5 +183,9 @@ public class MemberController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    public void handleBackButton(ActionEvent actionEvent) {
+        Navigation.navigateToScene("dashboard.fxml", backButton);
     }
 }

@@ -12,6 +12,7 @@ import java.io.IOException;
 public class DashboardController {
     public Button category_button;
     public Button book_button;
+    public Button member_button;
 
     public void handleCategoryClick(ActionEvent actionEvent) {
         navigateToScene("manage-categories.fxml");
@@ -19,6 +20,9 @@ public class DashboardController {
 
     public void handleBookClick(ActionEvent actionEvent) {
         navigateToScene("manage-books.fxml");
+    }
+    public void handleMemberClick(ActionEvent actionEvent) {
+        navigateToScene("manage-members.fxml");
     }
 
     private void navigateToScene(String pageName) {
@@ -40,4 +44,5 @@ public class DashboardController {
     }
 
 
+    
 }

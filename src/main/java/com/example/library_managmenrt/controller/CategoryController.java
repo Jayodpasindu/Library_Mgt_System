@@ -2,8 +2,10 @@ package com.example.library_managmenrt.controller;
 
 import com.example.library_managmenrt.dao.CategoryDeo;
 import com.example.library_managmenrt.model.Category;
+import com.example.library_managmenrt.utill.Navigation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,6 +14,8 @@ import javafx.util.Callback;
 import java.util.Locale;
 
 public class CategoryController {
+    @FXML
+    private Button backButton;
     @FXML
     private TableView<Category> categoryTable;
 
@@ -176,4 +180,7 @@ public class CategoryController {
     }
 
 
+    public void handleBackButton(ActionEvent actionEvent) {
+        Navigation.navigateToScene("dashboard.fxml", backButton);
+    }
 }

@@ -10,13 +10,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.Label?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_managmenrt.controller.CategoryController" prefWidth="600" prefHeight="400">
     <BorderPane>
         <top>
-            <VBox spacing="10" style="-fx-padding: 0 0 10 0;">
+            <VBox spacing="10" style="-fx-padding: 10 0 10 10;">
                 <HBox spacing="10">
                     <!-- Add Back Button -->
                     <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+                </HBox>
+                <HBox alignment="CENTER"  spacing="10" style="-fx-padding: 20 0 10 30;">
+                    <!-- Add Back Button -->
+                    <Label text="Manage Book Categories" style="-fx-font-size: 23px; -fx-font-weight: bold;"/>
                 </HBox>
                 <GridPane hgap="10" vgap="10">
                     <TextField fx:id="idField" promptText="Category ID" GridPane.columnIndex="0" />

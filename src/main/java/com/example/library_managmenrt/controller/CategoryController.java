@@ -146,7 +146,7 @@ public class CategoryController {
                         categoryDeo.saveCategory(newCategory);
                         loadCategories();
                         clearFields();
-                        showAlert(Alert.AlertType.INFORMATION, "Category Added", "ID: " + id + "\nName: " + name);
+                        showAlert(Alert.AlertType.INFORMATION, "Category Added", "Added category name: " + name);
                     } else {
                         showAlert(Alert.AlertType.ERROR, "Error", "Category ID already exists.");
                     }
@@ -156,7 +156,7 @@ public class CategoryController {
                     loadCategories();
                     clearFields();
                     selectedCategory = null; // Reset selection
-                    showAlert(Alert.AlertType.INFORMATION, "Category Updated", "ID: " + id + "\nName: " + name);
+                    showAlert(Alert.AlertType.INFORMATION, "Category Updated", "Updated category name: " + name);
                 }
             } catch (NumberFormatException e) {
                 showAlert(Alert.AlertType.ERROR, "Error", "Invalid ID format. Please enter a numeric ID.");

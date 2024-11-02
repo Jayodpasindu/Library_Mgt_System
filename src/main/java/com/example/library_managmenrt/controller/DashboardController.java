@@ -14,6 +14,7 @@ public class DashboardController {
     public Button book_button;
     public Button member_button;
     public Button transaction_button;
+    public Button logout_button;
 
     public void handleCategoryClick(ActionEvent actionEvent) {
         navigateToScene("manage-categories.fxml");
@@ -27,6 +28,10 @@ public class DashboardController {
     }
     public void handleBorrowingClick(ActionEvent actionEvent) {
         navigateToScene("manage-transactions.fxml");
+    }
+
+    public void handleLogoutClick(ActionEvent actionEvent) {
+        navigateToScene("login.fxml");
     }
 
     private void navigateToScene(String pageName) {
@@ -48,5 +53,5 @@ public class DashboardController {
     }
 
 
-    
+
 }

@@ -12,7 +12,8 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label text="Library Management System" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Label text="Library Management System" style="-fx-font-size: 23px; -fx-font-weight: bold;"/>
+    <VBox spacing="10.0"/>
     <Label text="Please login to continue"/>
 
     <Label text="Username:"/>
@@ -21,5 +22,5 @@
     <Label text="Password:"/>
     <PasswordField fx:id="passwordField" promptText="Enter your password"/>
 
-    <Button fx:id="loginButton" text="Login" onAction="#handleLogin"/>
+    <Button fx:id="loginButton" text="Login" onAction="#handleLogin" styleClass="btn btn-primary"/>
 </VBox>

@@ -45,7 +45,7 @@ public class DashboardController {
 
             // Set the new scene to the current stage
             currentStage.setScene(mainScene);
-            currentStage.setTitle("Dashboard");
+            currentStage.setTitle(pageName.split("\\.")[0]);
             currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();

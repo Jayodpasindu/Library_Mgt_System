@@ -1,0 +1,24 @@
+.nav-button {
+    -fx-background-color: #5a9bd5; /* Light blue background */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.nav-button:hover {
+    -fx-background-color: #4a8ac2; /* Darker blue on hover */
+}
+
+.logout-button {
+    -fx-background-color: #d9534f; /* Red background for logout */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-margin-top: 20px; /* Extra margin for separation */
+}
+
+.logout-button:hover {
+    -fx-background-color: #c9302c; /* Darker red on hover */
+}

@@ -76,7 +76,7 @@ public class MemberController {
                             if (isDeleted) {
                                 memberList.remove(memberToDelete); // Remove from the ObservableList
                                 memberTable.refresh(); // Refresh the table view
-                                showAlert(Alert.AlertType.INFORMATION, "Member Deleted", "Deleted: " + memberToDelete.getName());
+                                showAlert(Alert.AlertType.INFORMATION, "Member Deleted", "Name of the deleted member is : " + memberToDelete.getName());
                             } else {
                                 showAlert(Alert.AlertType.ERROR, "Deletion Failed", "Failed to delete: " + memberToDelete.getName());
                             }
@@ -143,9 +143,9 @@ public class MemberController {
                         memberDao.saveMember(newMember);
                         loadMembers();
                         clearFields();
-                        showAlert(Alert.AlertType.INFORMATION, "Member Added", "\nTitle: " + name);
+                        showAlert(Alert.AlertType.INFORMATION, "Member Added", "\nName of the Update member is: " + name);
                     } else {
-                        showAlert(Alert.AlertType.ERROR, "Error", "Book is already exists.");
+                        showAlert(Alert.AlertType.ERROR, "Error", "Member is already exists.");
                     }
                 } else { // Updating an existing member
                     selectedMember.setName(name);
@@ -155,7 +155,7 @@ public class MemberController {
                     loadMembers();
                     clearFields();
                     selectedMember = null; // Reset selection
-                    showAlert(Alert.AlertType.INFORMATION, "Category Updated",  "\nTitle: " + name);
+                    showAlert(Alert.AlertType.INFORMATION, "Member Updated",  "\nName of the Update member is : " + name);
                 }
             } catch (NumberFormatException e) {
                 showAlert(Alert.AlertType.ERROR, "Error", "Invalid ID format. Please enter a numeric ID.");

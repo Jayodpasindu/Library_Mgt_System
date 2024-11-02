@@ -10,17 +10,28 @@
 <?import javafx.geometry.Insets?>
 
 
-<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.library_managmenrt.controller.DashboardController">
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.library_managmenrt.controller.DashboardController"
+      prefWidth="600" prefHeight="500">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
+    <HBox alignment="CENTER"  spacing="10" style="-fx-padding: 20 0 50 0;">
+        <!-- Add Back Button -->
+        <Label text="Dashboard" style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+    </HBox>
 
-    <Button text="Category" fx:id="category_button" onAction="#handleCategoryClick"/>
-    <Button text="Books" fx:id="book_button" onAction="#handleBookClick"/>
-    <Button text="Members" fx:id="member_button" onAction="#handleMemberClick"/>
-    <Button text="Borrowings" fx:id="transaction_button" onAction="#handleBorrowingClick"/>
+    <!-- Navigation Buttons -->
+    <Button text="Manage Category" fx:id="category_button" onAction="#handleCategoryClick" style="-fx-pref-width: 150;"/>
+    <Button text="Manage Books" fx:id="book_button" onAction="#handleBookClick" style="-fx-pref-width: 150;"/>
+    <Button text="Manage Members" fx:id="member_button" onAction="#handleMemberClick" style="-fx-pref-width: 150;" />
+    <Button text="Manage Borrowings" fx:id="transaction_button" onAction="#handleBorrowingClick" style="-fx-pref-width: 150;"/>
 
+    <!-- Spacer for separation -->
+    <VBox spacing="50"/>
+
+    <!-- Logout Button -->
+    <Button text="Logout" fx:id="logout_button" onAction="#handleLogoutClick" style="-fx-background-color: #FF0000; -fx-text-fill: white;" />
 
 
 </VBox>

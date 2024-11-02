@@ -14,6 +14,7 @@ public class DashboardController {
     public Button book_button;
     public Button member_button;
     public Button transaction_button;
+    public Button logout_button;
 
     public void handleCategoryClick(ActionEvent actionEvent) {
         navigateToScene("manage-categories.fxml");
@@ -29,6 +30,10 @@ public class DashboardController {
         navigateToScene("manage-transactions.fxml");
     }
 
+    public void handleLogoutClick(ActionEvent actionEvent) {
+        navigateToScene("login.fxml");
+    }
+
     private void navigateToScene(String pageName) {
         try {
             // Load the new scene
@@ -40,7 +45,7 @@ public class DashboardController {
 
             // Set the new scene to the current stage
             currentStage.setScene(mainScene);
-            currentStage.setTitle("Dashboard");
+            currentStage.setTitle(pageName.split("\\.")[0]);
             currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -48,5 +53,5 @@ public class DashboardController {
     }
 
 
-    
+
 }

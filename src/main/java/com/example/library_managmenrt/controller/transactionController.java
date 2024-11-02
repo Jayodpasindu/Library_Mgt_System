@@ -183,7 +183,7 @@ public class transactionController {
             try {
                 if (selectedTransaction == null) { // Adding a new book
                     if (!transactionsList.stream().anyMatch(c -> c.getBookName() == bookName)) {
-                        Transaction newTransaction = new Transaction(bookId, bookName, memberId, memberName, borrowedDate, returnedDate);
+                        Transaction newTransaction = new Transaction(memberId, memberName,bookId, bookName, borrowedDate, returnedDate);
                         transactionDao.saveTransaction(newTransaction);
                         loadMembers();
                         clearFields();

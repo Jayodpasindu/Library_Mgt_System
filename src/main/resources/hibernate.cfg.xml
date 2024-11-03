@@ -25,5 +25,9 @@
         <!-- Other configurations -->
         <mapping class="com.example.library_managmenrt.model.Admin"/>
         <mapping class="com.example.library_managmenrt.model.Category"/>
+        <mapping class="com.example.library_managmenrt.model.Book"/>
+        <mapping class="com.example.library_managmenrt.model.Member"/>
+        <mapping class="com.example.library_managmenrt.model.Transaction"/>
+
     </session-factory>
 </hibernate-configuration>

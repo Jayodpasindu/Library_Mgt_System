@@ -2,8 +2,10 @@ package com.example.library_managmenrt.controller;
 
 import com.example.library_managmenrt.dao.CategoryDeo;
 import com.example.library_managmenrt.model.Category;
+import com.example.library_managmenrt.utill.Navigation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,6 +14,8 @@ import javafx.util.Callback;
 import java.util.Locale;
 
 public class CategoryController {
+    @FXML
+    private Button backButton;
     @FXML
     private TableView<Category> categoryTable;
 
@@ -142,7 +146,7 @@ public class CategoryController {
                         categoryDeo.saveCategory(newCategory);
                         loadCategories();
                         clearFields();
-                        showAlert(Alert.AlertType.INFORMATION, "Category Added", "ID: " + id + "\nName: " + name);
+                        showAlert(Alert.AlertType.INFORMATION, "Category Added", "Added category name: " + name);
                     } else {
                         showAlert(Alert.AlertType.ERROR, "Error", "Category ID already exists.");
                     }
@@ -152,7 +156,7 @@ public class CategoryController {
                     loadCategories();
                     clearFields();
                     selectedCategory = null; // Reset selection
-                    showAlert(Alert.AlertType.INFORMATION, "Category Updated", "ID: " + id + "\nName: " + name);
+                    showAlert(Alert.AlertType.INFORMATION, "Category Updated", "Updated category name: " + name);
                 }
             } catch (NumberFormatException e) {
                 showAlert(Alert.AlertType.ERROR, "Error", "Invalid ID format. Please enter a numeric ID.");
@@ -176,4 +180,7 @@ public class CategoryController {
     }
 
 
+    public void handleBackButton(ActionEvent actionEvent) {
+        Navigation.navigateToScene("dashboard.fxml", backButton);
+    }
 }

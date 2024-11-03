@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_managmenrt.controller.transactionController" prefWidth="600" prefHeight="400">
+    <BorderPane>
+        <top>
+            <VBox spacing="10" style="-fx-padding: 10 0 10 10;">
+                <HBox spacing="10">
+                    <!-- Add Back Button -->
+                    <Button fx:id="backButton" text="Back" onAction="#handleBackButton"/>
+                </HBox>
+
+                    <HBox alignment="CENTER"  spacing="10" style="-fx-padding: 20 0 10 30;">
+                        <!-- Add Back Button -->
+                        <Label text="Manage Borrowings" style="-fx-font-size: 23px; -fx-font-weight: bold;"/>
+                    </HBox>
+
+                <GridPane hgap="10" vgap="10" style="-fx-padding: 0 0 10 00;">
+                    <TextField fx:id="memberIdField" promptText="Member Id" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="memberNameField" promptText="Member Name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <TextField fx:id="bookIdField" promptText="Book Id" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="bookNameField" promptText="Book Name" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    <HBox xmlns:fx="http://javafx.com/fxml" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <!-- Label element -->
+                        <Label text="Borrowing Date:" />
+                        <DatePicker fx:id="borrowedDatePicker" accessibleText="Borrowed Date" />
+                    </HBox>
+                    <HBox xmlns:fx="http://javafx.com/fxml" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <!-- Label element -->
+                        <Label text="Borrowing Date:" />
+                        <DatePicker fx:id="returnedDatePicker" accessibleText="Returned Date" />
+                    </HBox>
+
+                    <Button fx:id="addButton" text="Add Record" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                </GridPane>
+            </VBox>
+        </top>
+        <center>
+            <TableView fx:id="transactionTable" prefWidth="1050" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="Id" prefWidth="50" />
+                    <TableColumn fx:id="memberIdColumn" text="Member Id" prefWidth="200" />
+                    <TableColumn fx:id="memberNameColumn" text="Member Name" prefWidth="200" />
+                    <TableColumn fx:id="bookIdColumn" text="Book Id" prefWidth="100" />
+                    <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="100" />
+                    <TableColumn fx:id="borrowedDateColumn" text="Borrowed Date" prefWidth="100" />
+                    <TableColumn fx:id="returnedDateColumn" text="Returned Date" prefWidth="100" />
+                    <TableColumn fx:id="returnedButtonColumn" text="Returned" prefWidth="100" />
+                    <TableColumn fx:id="deleteColumn" text="Delete" prefWidth="100" />
+                </columns>
+            </TableView>
+        </center>
+    </BorderPane>
+</AnchorPane>
